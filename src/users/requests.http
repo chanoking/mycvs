@@ -1,0 +1,41 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "chanhojin244@gmail.com",
+    "password" : "1234"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST  http://localhost:3000/auth/signout
+
+### Sign in as an existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "chanhojin244@gmail.com",
+    "password" : "1234"
+}
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/2
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=chanhojin94@gmail.com
+
+### Remove a user given id
+DELETE http://localhost:3000/auth/1434434
+
+### Update a user given id
+PATCH http://localhost:3000/auth/44444
+Content-Type: application/json
+
+{
+    "email":"chanhojin94@gmail.com",
+    "password":"2345"
+}
